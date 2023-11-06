@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/SDL2-src/include"
+                "${workspaceFolder}/Cppgame/SDL2-src/include/",
+                "${workspaceFolder}/Cppgame/src"
             ],
             "defines": [
                 "_DEBUG",
