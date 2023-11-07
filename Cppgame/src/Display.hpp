@@ -5,6 +5,7 @@
 #include <SDL2/SDL_image.h>
 
 #include "Image.hpp"
+#include "Math.hpp"
 
 
 class Display
@@ -13,6 +14,5 @@ class Display
         SDL_Window* DISPLAY;
         SDL_Renderer* RENDERER;
 
-        void set_caption(const char* title);
-        void set_icon(Image image);
+        void fill(Vector4 rgba);
 };

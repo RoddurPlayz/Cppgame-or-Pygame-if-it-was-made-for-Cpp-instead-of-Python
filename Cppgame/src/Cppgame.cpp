@@ -11,7 +11,7 @@
 #include "Math.hpp"
 
 
-int Cppgame::init()
+int cppgame::init()
 {
     if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
     {
@@ -33,7 +33,7 @@ int Cppgame::init()
 }
 
 
-Display Cppgame::set_mode(Vector2 size)
+Display cppgame::display::set_mode(Vector2 size)
 {
     Display display;
     
@@ -53,22 +53,65 @@ Display Cppgame::set_mode(Vector2 size)
 }
 
 
-Image Cppgame::load_image(const char* file)
+void cppgame::display::set_caption(const char* title)
+{
+    SDL_SetWindowTitle(DISPLAY, title);
+}
+
+
+void cppgame::display::set_icon(Image image)
+{
+    SDL_SetWindowIcon(DISPLAY, image.IMAGE);
+}
+
+
+void cppgame::display::flip()
+{
+    SDL_RenderPresent(RENDERER);
+}
+
+
+Image cppgame::image::load(const char* file)
 {
     Image image;
     image.DISPLAY = DISPLAY;
     image.RENDERER = RENDERER;
     image.IMAGE = IMG_Load(file);
 
+    if (!image.IMAGE)
+    {
+        std::cout << "[Cppgame] Cppgame ran into an error while loading an image from directory \"" << file << "\"!" << "\n";
+        std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
+    }
+
     return image;
 }
 
 
-Vector2 Cppgame::Vec2(float x, float y)
+Vector2 cppgame::math::Vec2(float x, float y)
 {
     Vector2 vec2;
     vec2.x = x;
     vec2.y = y;
 
     return vec2;
+}
+
+
+Vector4 cppgame::math::Vec4(float x, float y, float z, float w)
+{
+    Vector4 vec4;
+    vec4.x = x;
+    vec4.y = y;
+    vec4.z = z;
+    vec4.w = w;
+
+    return vec4;
+}
+
+
+void cppgame::quit()
+{
+    SDL_DestroyWindow(DISPLAY);
+    SDL_Quit();
 }

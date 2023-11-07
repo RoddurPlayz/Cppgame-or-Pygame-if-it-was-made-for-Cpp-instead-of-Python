@@ -5,15 +5,11 @@
 #include <SDL2/SDL_image.h>
 
 #include "Image.hpp"
+#include "Math.hpp"
 
 
-void Display::set_caption(const char* title)
+void Display::fill(Vector4 rgba)
 {
-    SDL_SetWindowTitle(DISPLAY, title);
-}
-
-
-void Display::set_icon(Image image)
-{
-    SDL_SetWindowIcon(DISPLAY, image.IMAGE);
+    SDL_RenderClear(RENDERER);
+    SDL_SetRenderDrawColor(RENDERER, rgba.x, rgba.y, rgba.z, rgba.w);
 }

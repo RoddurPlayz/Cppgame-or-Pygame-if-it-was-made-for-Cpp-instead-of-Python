@@ -14,12 +14,34 @@ static SDL_Window* DISPLAY;
 static SDL_Renderer* RENDERER;
 
 
-namespace Cppgame
+namespace cppgame
 {
     int init();
 
-    Display set_mode(Vector2 size);
-    Image load_image(const char* file);
 
-    Vector2 Vec2(float x, float y);
+    namespace display
+    {
+        Display set_mode(Vector2 size);
+
+        void set_caption(const char* title);
+        void set_icon(Image image);
+
+        void flip();
+    }
+
+
+    namespace image
+    {
+        Image load(const char* file);
+    }
+
+
+    namespace math
+    {
+        Vector2 Vec2(float x, float y);
+        Vector4 Vec4(float x, float y, float z, float w);
+    }
+
+
+    void quit();
 }
