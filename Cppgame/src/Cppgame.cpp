@@ -9,6 +9,7 @@
 #include "Display.hpp"
 #include "Image.hpp"
 #include "Math.hpp"
+#include "Clock.hpp"
 
 
 int cppgame::init()
@@ -61,7 +62,7 @@ void cppgame::display::set_caption(const char* title)
 
 void cppgame::display::set_icon(Image image)
 {
-    SDL_SetWindowIcon(DISPLAY, image.IMAGE);
+    SDL_SetWindowIcon(DISPLAY, image.IMAGE_SURFACE);
 }
 
 
@@ -76,9 +77,10 @@ Image cppgame::image::load(const char* file)
     Image image;
     image.DISPLAY = DISPLAY;
     image.RENDERER = RENDERER;
-    image.IMAGE = IMG_Load(file);
+    image.IMAGE_SURFACE = IMG_Load(file);
+    image.IMAGE_TEXTURE = IMG_LoadTexture(RENDERER, file);
 
-    if (!image.IMAGE)
+    if (!image.IMAGE_SURFACE || !image.IMAGE_TEXTURE)
     {
         std::cout << "[Cppgame] Cppgame ran into an error while loading an image from directory \"" << file << "\"!" << "\n";
         std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
@@ -107,6 +109,20 @@ Vector4 cppgame::math::Vec4(float x, float y, float z, float w)
     vec4.w = w;
 
     return vec4;
+}
+
+
+int cppgame::event::get(SDL_Event& event_variable)
+{
+    return SDL_PollEvent(&event_variable);
+}
+
+
+Clock cppgame::time::clock()
+{
+    Clock clock;
+
+    return clock;
 }
 
 

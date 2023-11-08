@@ -6,6 +6,7 @@
 
 #include "Image.hpp"
 #include "Math.hpp"
+#include "Rect.hpp"
 
 
 class Display
@@ -15,4 +16,5 @@ class Display
         SDL_Renderer* RENDERER;
 
         void fill(Vector4 rgba);
+        void blit(Image& image, Vector2 position);
 };

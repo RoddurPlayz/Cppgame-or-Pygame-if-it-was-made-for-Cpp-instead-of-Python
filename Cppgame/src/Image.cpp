@@ -13,7 +13,7 @@
 Vector2 Image::get_size()
 {
     SDL_Point size;
-    if (SDL_QueryTexture(SDL_CreateTextureFromSurface(RENDERER, IMAGE), NULL, NULL, &size.x, &size.y) < 0)
+    if (SDL_QueryTexture(IMAGE_TEXTURE, NULL, NULL, &size.x, &size.y) < 0)
     {
         std::cout << "[Cppgame] Cppgame ran into an error while querying image to get its size!" << "\n";
         std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
@@ -30,7 +30,7 @@ Vector2 Image::get_size()
 Rect Image::get_rect(Vector2 topleft)
 {
     SDL_Point size;
-    if (SDL_QueryTexture(SDL_CreateTextureFromSurface(RENDERER, IMAGE), NULL, NULL, &size.x, &size.y) < 0)
+    if (SDL_QueryTexture(IMAGE_TEXTURE, NULL, NULL, &size.x, &size.y) < 0)
     {
         std::cout << "[Cppgame] Cppgame ran into an error while querying image to create a rect with it!" << "\n";
         std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";

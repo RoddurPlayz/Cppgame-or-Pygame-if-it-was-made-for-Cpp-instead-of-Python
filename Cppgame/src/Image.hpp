@@ -12,7 +12,8 @@
 struct Image
 {
     public:
-        SDL_Surface* IMAGE;
+        SDL_Surface* IMAGE_SURFACE;
+        SDL_Texture* IMAGE_TEXTURE;
         SDL_Window* DISPLAY;
         SDL_Renderer* RENDERER;
 

@@ -8,6 +8,7 @@
 #include "Display.hpp"
 #include "Image.hpp"
 #include "Math.hpp"
+#include "Clock.hpp"
 
 
 static SDL_Window* DISPLAY;
@@ -40,6 +41,18 @@ namespace cppgame
     {
         Vector2 Vec2(float x, float y);
         Vector4 Vec4(float x, float y, float z, float w);
+    }
+
+
+    namespace event
+    {
+        int get(SDL_Event& event_variable);
+    }
+
+
+    namespace time
+    {
+        Clock clock();
     }
 
 

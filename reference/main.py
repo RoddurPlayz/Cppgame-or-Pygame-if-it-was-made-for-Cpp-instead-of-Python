@@ -1,4 +1,4 @@
 import pygame
 
 
-pygame.event.get()
+pygame.time.Clock().get_fps()
