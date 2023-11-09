@@ -9,14 +9,14 @@
 #include "Rect.hpp"
 
 
-struct Image
+struct IMAGE
 {
     public:
-        SDL_Surface* IMAGE_SURFACE;
-        SDL_Texture* IMAGE_TEXTURE;
-        SDL_Window* DISPLAY;
-        SDL_Renderer* RENDERER;
+        SDL_Surface* image_surface;
+        SDL_Texture* image_texture;
+        SDL_Window* display;
+        SDL_Renderer* renderer;
 
-        Vector2 get_size();
-        Rect get_rect(Vector2 topleft);
+        VECTOR2 get_size();
+        RECT get_rect(VECTOR2 topleft);
 };

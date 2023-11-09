@@ -34,53 +34,60 @@ int cppgame::init()
 }
 
 
-Display cppgame::display::set_mode(Vector2 size)
+DISPLAY cppgame::display::set_mode(VECTOR2 size)
 {
-    Display display;
+    DISPLAY WIN;
     
-    display.DISPLAY = SDL_CreateWindow("Cppgame", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, size.x, size.y, 0);
-    if (!display.DISPLAY)
+    WIN.display = SDL_CreateWindow("Cppgame", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, size.x, size.y, 0);
+    if (!WIN.display)
     {
         std::cout << "[Cppgame] Cppgame ran into an error while initializing display!" << "\n";
         std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
     }
 
-    display.RENDERER = SDL_CreateRenderer(display.DISPLAY, -1, SDL_RENDERER_ACCELERATED);
+    WIN.renderer = SDL_CreateRenderer(WIN.display, -1, SDL_RENDERER_ACCELERATED);
 
-    DISPLAY = display.DISPLAY;
-    RENDERER = display.RENDERER;
+    Display = WIN.display;
+    Renderer = WIN.renderer;
+    Window = WIN;
 
-    return display;
+    return WIN;
+}
+
+
+DISPLAY& cppgame::display::get_surface()
+{
+    return Window;
 }
 
 
 void cppgame::display::set_caption(const char* title)
 {
-    SDL_SetWindowTitle(DISPLAY, title);
+    SDL_SetWindowTitle(Display, title);
 }
 
 
-void cppgame::display::set_icon(Image image)
+void cppgame::display::set_icon(IMAGE image)
 {
-    SDL_SetWindowIcon(DISPLAY, image.IMAGE_SURFACE);
+    SDL_SetWindowIcon(Display, image.image_surface);
 }
 
 
 void cppgame::display::flip()
 {
-    SDL_RenderPresent(RENDERER);
+    SDL_RenderPresent(Renderer);
 }
 
 
-Image cppgame::image::load(const char* file)
+IMAGE cppgame::image::load(const char* file)
 {
-    Image image;
-    image.DISPLAY = DISPLAY;
-    image.RENDERER = RENDERER;
-    image.IMAGE_SURFACE = IMG_Load(file);
-    image.IMAGE_TEXTURE = IMG_LoadTexture(RENDERER, file);
+    IMAGE image;
+    image.display = Display;
+    image.renderer = Renderer;
+    image.image_surface = IMG_Load(file);
+    image.image_texture = IMG_LoadTexture(Renderer, file);
 
-    if (!image.IMAGE_SURFACE || !image.IMAGE_TEXTURE)
+    if (!image.image_surface || !image.image_texture)
     {
         std::cout << "[Cppgame] Cppgame ran into an error while loading an image from directory \"" << file << "\"!" << "\n";
         std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
@@ -90,9 +97,9 @@ Image cppgame::image::load(const char* file)
 }
 
 
-Vector2 cppgame::math::Vec2(float x, float y)
+VECTOR2 cppgame::math::Vector2(float x, float y)
 {
-    Vector2 vec2;
+    VECTOR2 vec2;
     vec2.x = x;
     vec2.y = y;
 
@@ -100,9 +107,9 @@ Vector2 cppgame::math::Vec2(float x, float y)
 }
 
 
-Vector4 cppgame::math::Vec4(float x, float y, float z, float w)
+VECTOR4 cppgame::math::Vector4(float x, float y, float z, float w)
 {
-    Vector4 vec4;
+    VECTOR4 vec4;
     vec4.x = x;
     vec4.y = y;
     vec4.z = z;
@@ -118,9 +125,9 @@ int cppgame::event::get(SDL_Event& event_variable)
 }
 
 
-Clock cppgame::time::clock()
+CLOCK cppgame::time::clock()
 {
-    Clock clock;
+    CLOCK clock;
 
     return clock;
 }
@@ -128,6 +135,6 @@ Clock cppgame::time::clock()
 
 void cppgame::quit()
 {
-    SDL_DestroyWindow(DISPLAY);
+    SDL_DestroyWindow(Display);
     SDL_Quit();
 }

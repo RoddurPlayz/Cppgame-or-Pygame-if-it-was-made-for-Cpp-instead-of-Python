@@ -5,16 +5,16 @@
 #include <SDL2/SDL_image.h>
 
 
-void Rect::move_ip(float x, float y)
+void RECT::move_ip(float x, float y)
 {
-    RECT.x += x;
-    RECT.y += y;
+    rect.x += x;
+    rect.y += y;
 }
 
 
-bool Rect::collide_rect(Rect& rect)
+bool RECT::collide_rect(RECT& rect)
 {
-    if (SDL_HasIntersection(&RECT, &rect.RECT))
+    if (SDL_HasIntersection(&this->rect, &rect.rect))
         return true;
     return false;
 }

@@ -10,16 +10,16 @@
 #include "Rect.hpp"
 
 
-Vector2 Image::get_size()
+VECTOR2 IMAGE::get_size()
 {
     SDL_Point size;
-    if (SDL_QueryTexture(IMAGE_TEXTURE, NULL, NULL, &size.x, &size.y) < 0)
+    if (SDL_QueryTexture(image_texture, NULL, NULL, &size.x, &size.y) < 0)
     {
         std::cout << "[Cppgame] Cppgame ran into an error while querying image to get its size!" << "\n";
         std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
     }
 
-    Vector2 vector;
+    VECTOR2 vector;
     vector.x = size.x;
     vector.y = size.y;
 
@@ -27,20 +27,20 @@ Vector2 Image::get_size()
 }
 
 
-Rect Image::get_rect(Vector2 topleft)
+RECT IMAGE::get_rect(VECTOR2 topleft)
 {
     SDL_Point size;
-    if (SDL_QueryTexture(IMAGE_TEXTURE, NULL, NULL, &size.x, &size.y) < 0)
+    if (SDL_QueryTexture(image_texture, NULL, NULL, &size.x, &size.y) < 0)
     {
         std::cout << "[Cppgame] Cppgame ran into an error while querying image to create a rect with it!" << "\n";
         std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
     }
 
-    Rect rect;
-    rect.RECT.x = topleft.x;
-    rect.RECT.y = topleft.y;
-    rect.RECT.w = size.x;
-    rect.RECT.h = size.x;
+    RECT rect;
+    rect.rect.x = topleft.x;
+    rect.rect.y = topleft.y;
+    rect.rect.w = size.x;
+    rect.rect.h = size.x;
 
     return rect;
 }

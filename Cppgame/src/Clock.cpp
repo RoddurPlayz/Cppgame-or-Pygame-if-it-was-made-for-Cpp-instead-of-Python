@@ -4,7 +4,7 @@
 #include "SDL2/SDL.h"
 
 
-double Clock::tick(double FPS)
+double CLOCK::tick(double FPS)
 {
     double current_tick_time = SDL_GetTicks();
     dt = (current_tick_time - last_tick_time) / 1000;

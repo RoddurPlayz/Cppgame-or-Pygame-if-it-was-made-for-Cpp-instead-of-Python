@@ -4,7 +4,7 @@
 #include "SDL2/SDL.h"
 
 
-struct Clock
+struct CLOCK
 {
     double tick(double FPS);
 

@@ -1,13 +1,13 @@
 #pragma once
 
 
-struct Vector2
+struct VECTOR2
 {
     float x, y;
 };
 
 
-struct Vector4
+struct VECTOR4
 {
     float x, y;
     float z, w;

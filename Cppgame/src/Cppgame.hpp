@@ -11,8 +11,9 @@
 #include "Clock.hpp"
 
 
-static SDL_Window* DISPLAY;
-static SDL_Renderer* RENDERER;
+static SDL_Window* Display;
+static SDL_Renderer* Renderer;
+static DISPLAY Window;
 
 
 namespace cppgame
@@ -22,10 +23,11 @@ namespace cppgame
 
     namespace display
     {
-        Display set_mode(Vector2 size);
+        DISPLAY set_mode(VECTOR2 size);
+        DISPLAY& get_surface();
 
         void set_caption(const char* title);
-        void set_icon(Image image);
+        void set_icon(IMAGE image);
 
         void flip();
     }
@@ -33,14 +35,14 @@ namespace cppgame
 
     namespace image
     {
-        Image load(const char* file);
+        IMAGE load(const char* file);
     }
 
 
     namespace math
     {
-        Vector2 Vec2(float x, float y);
-        Vector4 Vec4(float x, float y, float z, float w);
+        VECTOR2 Vector2(float x, float y);
+        VECTOR4 Vector4(float x, float y, float z, float w);
     }
 
 
@@ -52,7 +54,7 @@ namespace cppgame
 
     namespace time
     {
-        Clock clock();
+        CLOCK clock();
     }
 
 

@@ -5,11 +5,11 @@
 #include <SDL2/SDL_image.h>
 
 
-struct Rect
+struct RECT
 {
-    SDL_Rect RECT;
+    SDL_Rect rect;
 
     void move_ip(float x, float y);
 
-    bool collide_rect(Rect& rect);
+    bool collide_rect(RECT& rect);
 };
