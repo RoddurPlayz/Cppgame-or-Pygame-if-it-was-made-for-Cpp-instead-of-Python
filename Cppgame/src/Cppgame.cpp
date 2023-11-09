@@ -34,11 +34,11 @@ int cppgame::init()
 }
 
 
-DISPLAY cppgame::display::set_mode(VECTOR2 size)
+DISPLAY cppgame::display::set_mode(VECTOR2 size, Uint32 flags)
 {
     DISPLAY WIN;
     
-    WIN.display = SDL_CreateWindow("Cppgame", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, size.x, size.y, 0);
+    WIN.display = SDL_CreateWindow("Cppgame", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, size.x, size.y, flags);
     if (!WIN.display)
     {
         std::cout << "[Cppgame] Cppgame ran into an error while initializing display!" << "\n";

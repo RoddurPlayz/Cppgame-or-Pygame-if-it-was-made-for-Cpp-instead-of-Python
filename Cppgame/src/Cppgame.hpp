@@ -23,7 +23,7 @@ namespace cppgame
 
     namespace display
     {
-        DISPLAY set_mode(VECTOR2 size);
+        DISPLAY set_mode(VECTOR2 size, Uint32 flags);
         DISPLAY& get_surface();
 
         void set_caption(const char* title);
