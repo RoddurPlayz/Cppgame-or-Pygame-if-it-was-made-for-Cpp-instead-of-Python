@@ -24,9 +24,10 @@ int main(int argc, char *argv[])
 {
     cppgame::init();
 
+    DISPLAY WIN = cppgame::display::set_mode(cppgame::math::Vector2(800, 600), 0, 0);
+    
     IMAGE img = cppgame::image::load("textures/test.png");
 
-    DISPLAY WIN = cppgame::display::set_mode(cppgame::math::Vector2(800, 600), 0);
     cppgame::display::set_caption("TEST");
     cppgame::display::set_icon(img);
 

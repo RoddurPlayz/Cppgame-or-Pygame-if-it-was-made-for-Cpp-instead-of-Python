@@ -34,7 +34,7 @@ int cppgame::init()
 }
 
 
-DISPLAY cppgame::display::set_mode(VECTOR2 size, Uint32 flags)
+DISPLAY cppgame::display::set_mode(VECTOR2 size, Uint32 flags, int vsync)
 {
     DISPLAY WIN;
     
@@ -45,7 +45,8 @@ DISPLAY cppgame::display::set_mode(VECTOR2 size, Uint32 flags)
         std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
     }
 
-    WIN.renderer = SDL_CreateRenderer(WIN.display, -1, SDL_RENDERER_ACCELERATED);
+    if (vsync) WIN.renderer = SDL_CreateRenderer(WIN.display, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+    else WIN.renderer = SDL_CreateRenderer(WIN.display, -1, SDL_RENDERER_ACCELERATED);
 
     Display = WIN.display;
     Renderer = WIN.renderer;
