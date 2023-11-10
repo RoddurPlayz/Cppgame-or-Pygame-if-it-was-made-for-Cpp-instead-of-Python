@@ -2,6 +2,7 @@
 
 
 #include <iostream>
+#include <array>
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
@@ -52,11 +53,11 @@ int cppgame::init()
 }
 
 
-DISPLAY cppgame::display::set_mode(VECTOR2 size, Uint32 flags, int vsync)
+DISPLAY cppgame::display::set_mode(const std::array<float, 2>& size, Uint32 flags, int vsync)
 {
     DISPLAY WIN;
     
-    WIN.display = SDL_CreateWindow("Cppgame", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, size.x, size.y, flags);
+    WIN.display = SDL_CreateWindow("Cppgame", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, size[0], size[1], flags);
     if (!WIN.display)
     {
         std::cout << "[Cppgame] Cppgame ran into an error while initializing display!" << "\n";
@@ -86,7 +87,7 @@ void cppgame::display::set_caption(const char* title)
 }
 
 
-void cppgame::display::set_icon(IMAGE image)
+void cppgame::display::set_icon(const IMAGE& image)
 {
     SDL_SetWindowIcon(Display, image.image_surface);
 }
@@ -124,7 +125,7 @@ MUSIC cppgame::mixer::music::load(const char* file)
 }
 
 
-void cppgame::mixer::music::set_volume(float volume)
+void cppgame::mixer::music::set_volume(const float volume)
 {
     Mix_VolumeMusic(volume);
 }
@@ -148,7 +149,43 @@ bool cppgame::mixer::music::get_state()
 }
 
 
-VECTOR2 cppgame::math::Vector2(float x, float y)
+RECT cppgame::Rect(const float left, const float top, const float width, const float height)
+{
+    RECT rect;
+    rect.rect.x = left;
+    rect.rect.y = top;
+    rect.rect.w = width;
+    rect.rect.h = height;
+
+    return rect;
+}
+
+
+RECT cppgame::Rect(const std::array<float, 2>& left_top, const std::array<float, 2>& width_height)
+{
+    RECT rect;
+    rect.rect.x = left_top[0];
+    rect.rect.y = left_top[1];
+    rect.rect.w = width_height[0];
+    rect.rect.h = width_height[1];
+
+    return rect;
+}
+
+
+RECT cppgame::Rect(const std::array<float, 4>& single_arg)
+{
+    RECT rect;
+    rect.rect.x = single_arg[0];
+    rect.rect.y = single_arg[1];
+    rect.rect.w = single_arg[2];
+    rect.rect.h = single_arg[3];
+
+    return rect;
+}
+
+
+VECTOR2 cppgame::math::Vector2(const float x, const float y)
 {
     VECTOR2 vec2;
     vec2.x = x;
@@ -158,7 +195,7 @@ VECTOR2 cppgame::math::Vector2(float x, float y)
 }
 
 
-VECTOR4 cppgame::math::Vector4(float x, float y, float z, float w)
+VECTOR4 cppgame::math::Vector4(const float x, const float y, const float z, const float w)
 {
     VECTOR4 vec4;
     vec4.x = x;

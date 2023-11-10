@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <array>
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
@@ -25,11 +26,11 @@ namespace cppgame
 
     namespace display
     {
-        DISPLAY set_mode(VECTOR2 size, Uint32 flags, int vsync);
+        DISPLAY set_mode(const std::array<float, 2>& size, Uint32 flags, int vsync);
         DISPLAY& get_surface();
 
         void set_caption(const char* title);
-        void set_icon(IMAGE image);
+        void set_icon(const IMAGE& image);
 
         void flip();
     }
@@ -46,7 +47,7 @@ namespace cppgame
         namespace music
         {
             MUSIC load(const char* file);
-            void set_volume(float volume);
+            void set_volume(const float volume);
 
             void pause();
             void resume();
@@ -55,11 +56,14 @@ namespace cppgame
         }
     }
 
+    RECT Rect(float left, float top, float width, float height);
+    RECT Rect(const std::array<float, 2>& left_top, const std::array<float, 2>& width_height);
+    RECT Rect(const std::array<float, 4>& single_arg);
 
     namespace math
     {
-        VECTOR2 Vector2(float x, float y);
-        VECTOR4 Vector4(float x, float y, float z, float w);
+        VECTOR2 Vector2(const float x, const float y);
+        VECTOR4 Vector4(const float x, const float y, const float z, const float w);
     }
 
 

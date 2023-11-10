@@ -27,7 +27,7 @@ VECTOR2 IMAGE::get_size()
 }
 
 
-RECT IMAGE::get_rect(VECTOR2 topleft)
+RECT IMAGE::get_rect(const std::array<float, 2>& topleft)
 {
     SDL_Point size;
     if (SDL_QueryTexture(image_texture, NULL, NULL, &size.x, &size.y) < 0)
@@ -37,8 +37,8 @@ RECT IMAGE::get_rect(VECTOR2 topleft)
     }
 
     RECT rect;
-    rect.rect.x = topleft.x;
-    rect.rect.y = topleft.y;
+    rect.rect.x = topleft[0];
+    rect.rect.y = topleft[1];
     rect.rect.w = size.x;
     rect.rect.h = size.x;
 

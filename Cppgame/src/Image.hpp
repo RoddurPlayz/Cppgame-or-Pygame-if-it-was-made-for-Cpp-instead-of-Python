@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <array>
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
@@ -17,5 +18,5 @@ struct IMAGE
     SDL_Renderer* renderer;
 
     VECTOR2 get_size();
-    RECT get_rect(VECTOR2 topleft);
+    RECT get_rect(const std::array<float, 2>& topleft);
 };

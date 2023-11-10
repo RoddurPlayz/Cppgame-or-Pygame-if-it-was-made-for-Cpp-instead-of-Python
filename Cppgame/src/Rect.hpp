@@ -9,7 +9,7 @@ struct RECT
 {
     SDL_Rect rect;
 
-    void move_ip(float x, float y);
+    void move_ip(const float x, const float y);
 
-    bool collide_rect(RECT& rect);
+    bool collide_rect(const RECT& rect);
 };

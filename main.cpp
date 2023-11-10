@@ -11,12 +11,12 @@ class Player
     public:
         void draw(DISPLAY& display)
         {
-            display.blit(image, cppgame::math::Vector2(rect.rect.x, rect.rect.y));
+            display.blit(image, {0, 0});
         }
     
     private:
         IMAGE image = cppgame::image::load("textures/test.png");
-        RECT rect = image.get_rect(cppgame::math::Vector2(0, 0));
+        RECT rect = image.get_rect({0, 0});
 };
 
 
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 {
     cppgame::init();
 
-    DISPLAY WIN = cppgame::display::set_mode(cppgame::math::Vector2(800, 600), 0, 0);
+    DISPLAY WIN = cppgame::display::set_mode({800, 600}, 0, 0);
     
     IMAGE img = cppgame::image::load("textures/test.png");
 
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
     {
         clock.tick(60);
 
-        WIN.fill(cppgame::math::Vector4(255, 255, 255, 255));
+        WIN.fill({255, 255, 255, 255});
         
         for (SDL_Event event; cppgame::event::get(event);)
         {

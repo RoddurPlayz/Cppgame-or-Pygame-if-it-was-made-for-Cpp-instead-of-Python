@@ -4,7 +4,7 @@
 #include <SDL2/SDL_mixer.h>
 
 
-void MUSIC::play(int loops)
+void MUSIC::play(const int loops)
 {
     Mix_PlayMusic(music, loops);
 }
