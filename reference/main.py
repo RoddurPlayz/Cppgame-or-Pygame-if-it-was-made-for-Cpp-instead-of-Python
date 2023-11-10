@@ -1,4 +1,4 @@
 import pygame
 
 
-print(pygame.HWSURFACE)
+music = pygame.mixer.music.load("LOAD")

@@ -4,11 +4,13 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <SDL2/SDL_mixer.h>
 
 #include "Display.hpp"
 #include "Image.hpp"
 #include "Math.hpp"
 #include "Clock.hpp"
+#include "Music.hpp"
 
 
 static SDL_Window* Display;
@@ -36,6 +38,21 @@ namespace cppgame
     namespace image
     {
         IMAGE load(const char* file);
+    }
+
+
+    namespace mixer
+    {
+        namespace music
+        {
+            MUSIC load(const char* file);
+            void set_volume(float volume);
+
+            void pause();
+            void resume();
+
+            bool get_state();
+        }
     }
 
 

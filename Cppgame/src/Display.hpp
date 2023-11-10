@@ -9,12 +9,11 @@
 #include "Rect.hpp"
 
 
-class DISPLAY
+struct DISPLAY
 {
-    public:
-        SDL_Window* display;
-        SDL_Renderer* renderer;
+    SDL_Window* display;
+    SDL_Renderer* renderer;
 
-        void fill(VECTOR4 rgba);
-        void blit(IMAGE& image, VECTOR2 position);
+    void fill(VECTOR4 rgba);
+    void blit(IMAGE& image, VECTOR2 position);
 };

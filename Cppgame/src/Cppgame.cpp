@@ -5,11 +5,13 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <SDL2/SDL_mixer.h>
 
 #include "Display.hpp"
 #include "Image.hpp"
 #include "Math.hpp"
 #include "Clock.hpp"
+#include "Music.hpp"
 
 
 int cppgame::init()
@@ -19,7 +21,7 @@ int cppgame::init()
         std::cout << "[Cppgame] Cppgame ran into an error while initializing everything!" << "\n";
         std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
 
-        return 1;
+        return -1;
     }
 
     if (!IMG_Init(IMG_INIT_PNG))
@@ -27,7 +29,23 @@ int cppgame::init()
         std::cout << "[Cppgame] Cppgame ran into an error while initializing PNG format!" << "\n";
         std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
 
-        return 1;
+        return -1;
+    }
+
+    if (!Mix_Init(MIX_INIT_MP3 | MIX_INIT_OPUS | MIX_INIT_OGG))
+    {
+        std::cout << "[Cppgame] Cppgame ran into an error while initializing MP3, OPUS and OGG format!" << "\n";
+        std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
+
+        return -1;
+    }
+
+    if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 6, 4096) < 0)
+    {
+        std::cout << "[Cppgame] Cppgame ran into an error while initializing audio!" << "\n";
+        std::cout << "[Cppgame Error] " << SDL_GetError() << "\n";
+
+        return -1;
     }
 
     return 0;
@@ -98,6 +116,38 @@ IMAGE cppgame::image::load(const char* file)
 }
 
 
+MUSIC cppgame::mixer::music::load(const char* file)
+{
+    MUSIC music;
+    music.music = Mix_LoadMUS(file);
+    return music;
+}
+
+
+void cppgame::mixer::music::set_volume(float volume)
+{
+    Mix_VolumeMusic(volume);
+}
+
+
+void cppgame::mixer::music::pause()
+{
+    Mix_PauseMusic();
+}
+
+
+void cppgame::mixer::music::resume()
+{
+    Mix_ResumeMusic();
+}
+
+
+bool cppgame::mixer::music::get_state()
+{
+    return !Mix_PausedMusic();
+}
+
+
 VECTOR2 cppgame::math::Vector2(float x, float y)
 {
     VECTOR2 vec2;
@@ -138,4 +188,8 @@ void cppgame::quit()
 {
     SDL_DestroyWindow(Display);
     SDL_Quit();
+
+    IMG_Quit();
+    Mix_Quit();
+    Mix_HaltMusic();
 }

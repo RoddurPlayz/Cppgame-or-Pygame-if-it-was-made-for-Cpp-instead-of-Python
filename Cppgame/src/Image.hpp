@@ -11,12 +11,11 @@
 
 struct IMAGE
 {
-    public:
-        SDL_Surface* image_surface;
-        SDL_Texture* image_texture;
-        SDL_Window* display;
-        SDL_Renderer* renderer;
+    SDL_Surface* image_surface;
+    SDL_Texture* image_texture;
+    SDL_Window* display;
+    SDL_Renderer* renderer;
 
-        VECTOR2 get_size();
-        RECT get_rect(VECTOR2 topleft);
+    VECTOR2 get_size();
+    RECT get_rect(VECTOR2 topleft);
 };
