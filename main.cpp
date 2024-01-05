@@ -11,7 +11,7 @@ class Player
     public:
         void draw(DISPLAY& display)
         {
-            display.blit(image, {0, 0});
+            display.blit(image, rect);
         }
     
     private:
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 
     while (true)
     {
-        clock.tick(60);
+        std::cout << clock.tick(60);
 
         WIN.fill({255, 255, 255, 255});
         

@@ -14,5 +14,5 @@ double CLOCK::tick(double FPS)
         SDL_Delay(1000 / FPS - dt);
     }
     
-    return dt;
+    return dt * 1000;
 }
