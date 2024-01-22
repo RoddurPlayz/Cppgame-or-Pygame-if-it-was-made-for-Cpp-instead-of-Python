@@ -18,9 +18,42 @@
     <ClInclude Include="Cppgame\include\Cppgame-src\Cppgame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Cppgame\include\Cppgame-src\Clock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cppgame\include\Cppgame-src\Display.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cppgame\include\Cppgame-src\Image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cppgame\include\Cppgame-src\Music.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cppgame\include\Cppgame-src\Rect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cppgame\include\Cppgame-src\Math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cppgame\include\Cppgame-src\Cppgame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cppgame\include\Cppgame-src\Clock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cppgame\include\Cppgame-src\Display.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cppgame\include\Cppgame-src\Image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cppgame\include\Cppgame-src\Music.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cppgame\include\Cppgame-src\Rect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

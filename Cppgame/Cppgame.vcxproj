@@ -27,26 +27,26 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -73,22 +73,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Cppgame\Cppgame\lib\x64</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(Platform)$(Configuration)</IntDir>
-    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\SDL2-lib\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Cppgame\Cppgame\lib\x64</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(Platform)$(Configuration)</IntDir>
-    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\SDL2-lib\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)Cppgame\Cppgame\lib\x86</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(Platform)$(Configuration)</IntDir>
-    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\SDL2-lib\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)Cppgame\Cppgame\lib\x86</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(Platform)$(Configuration)</IntDir>
-    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\SDL2-lib\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -151,10 +151,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Cppgame\include\Cppgame-src\Clock.h" />
     <ClInclude Include="Cppgame\include\Cppgame-src\Cppgame.h" />
+    <ClInclude Include="Cppgame\include\Cppgame-src\Math.h" />
+    <ClInclude Include="Cppgame\include\Cppgame-src\Display.h" />
+    <ClInclude Include="Cppgame\include\Cppgame-src\Image.h" />
+    <ClInclude Include="Cppgame\include\Cppgame-src\Music.h" />
+    <ClInclude Include="Cppgame\include\Cppgame-src\Rect.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Cppgame\include\Cppgame-src\Clock.cpp" />
     <ClCompile Include="Cppgame\include\Cppgame-src\Cppgame.cpp" />
+    <ClCompile Include="Cppgame\include\Cppgame-src\Display.cpp" />
+    <ClCompile Include="Cppgame\include\Cppgame-src\Image.cpp" />
+    <ClCompile Include="Cppgame\include\Cppgame-src\Music.cpp" />
+    <ClCompile Include="Cppgame\include\Cppgame-src\Rect.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
