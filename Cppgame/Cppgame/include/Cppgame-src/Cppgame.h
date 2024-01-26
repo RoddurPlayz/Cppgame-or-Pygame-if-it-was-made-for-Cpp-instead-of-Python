@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <array>
+#include <vector>
 
 #include "../SDL2-src/SDL.h"
 #include "../SDL2-src/SDL_image.h"
@@ -17,6 +18,8 @@
 static SDL_Window* Display;
 static SDL_Renderer* Renderer;
 static DISPLAY Window;
+
+
 
 
 namespace cppgame
@@ -78,6 +81,52 @@ namespace cppgame
         CLOCK clock();
     }
 
+    
+    namespace sprite
+    {
+        class Sprite
+        {
+        public:
+            IMAGE image;
+            RECT rect;
+
+            virtual void update();
+        };
+
+
+        class Group
+        {
+        public:
+            Group(std::vector<Sprite*> sprites);
+            Group();
+
+            void add(std::vector<Sprite*> sprites);
+
+            void draw(DISPLAY& display);
+
+            ~Group();
+        
+        private:
+            std::vector<Sprite*> sprites;
+        };
+    }
+
+
+    namespace extra
+    {
+        class Extras
+        {
+        public:
+            virtual void on_quit();
+
+            virtual ~Extras();
+        };
+
+        void set_extra_class(Extras* extra_class);
+    }
+
 
     void quit();
 }
+
+static cppgame::extra::Extras* extras = nullptr;

@@ -6,7 +6,7 @@
 
 struct CLOCK
 {
-    double tick(double FPS);
+    long tick(double FPS);
 
 private:
     double FPS = 0.0f;

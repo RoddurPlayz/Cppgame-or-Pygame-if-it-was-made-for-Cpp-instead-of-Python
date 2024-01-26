@@ -222,12 +222,78 @@ CLOCK cppgame::time::clock()
 }
 
 
+void cppgame::sprite::Sprite::update()
+{
+
+}
+
+
+cppgame::sprite::Group::Group(std::vector<Sprite*> sprites)
+{
+    for (Sprite* sprite : sprites)
+    {
+        this->sprites.push_back(sprite);
+    }
+}
+
+
+void cppgame::sprite::Group::add(std::vector<Sprite*> sprites)
+{
+    for (Sprite* sprite : sprites)
+    {
+        this->sprites.push_back(sprite);
+    }
+}
+
+
+void cppgame::sprite::Group::draw(DISPLAY& display)
+{
+    for (Sprite* sprite : this->sprites)
+    {
+        display.blit(sprite->image, sprite->rect);
+        sprite->update();
+    }
+}
+
+
+cppgame::sprite::Group::~Group()
+{
+    for (Sprite* sprite : this->sprites)
+    {
+        delete sprite;
+    }
+
+    this->sprites.clear();
+}
+
+
+void cppgame::extra::Extras::on_quit()
+{
+
+}
+
+
+cppgame::extra::Extras::~Extras()
+{
+    delete extras;
+}
+
+
+void cppgame::extra::set_extra_class(cppgame::extra::Extras* extra_class)
+{
+    extras = extra_class;
+}
+
+
 void cppgame::quit()
 {
+    extras->on_quit();
+
     SDL_DestroyWindow(Display);
     SDL_Quit();
 
     IMG_Quit();
+
     Mix_Quit();
     Mix_HaltMusic();
 }
