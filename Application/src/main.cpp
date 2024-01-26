@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
 
     while (true)
     {
-        std::cout << clock.tick(60) * 0.001 << "\r";
+        std::cout << clock.tick(60) << "\r";
 
         WIN.fill({ 255, 255, 255, 255 });
 
