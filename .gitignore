@@ -1,6 +1,19 @@
 .vs/
-intermediate/
-output/
+
+intermediate/x64/Debug/
+intermediate/x64/Release/
+intermediate/x84/Debug/
+intermediate/x84/Release/
+
+output/x64/Debug/Application.exe
+output/x64/Release/Application.exe
+output/x64/Debug/Application.pdb
+output/x64/Release/Application.pdb
+
+output/x86/Debug/Application.exe
+output/x86/Release/Application.exe
+output/x86/Debug/Application.pdb
+output/x86/Release/Application.pdb
 
 Cppgame/Cppgame/lib/x64/Cppgame.idb
 Cppgame/Cppgame/lib/x64/Cppgame.pdb
