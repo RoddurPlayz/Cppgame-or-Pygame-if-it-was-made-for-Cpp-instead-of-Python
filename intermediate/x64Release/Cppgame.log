@@ -1,0 +1,102 @@
+﻿G:\Visual-Studio-2022\Visual-Studio-2022\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(516,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+G:\Visual-Studio-2022\Visual-Studio-2022\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  Clock.cpp
+  Cppgame.cpp
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Clock.cpp(10,17): warning C4244: 'initializing': conversion from 'double' to 'long', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Clock.cpp(15,30): warning C4244: 'argument': conversion from 'double' to 'Uint32', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,112): warning C4244: 'argument': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,112): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,112): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,112): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,112): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,103): warning C4244: 'argument': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,103): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,103): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,103): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,103): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(133,21): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(158,19): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(159,19): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(160,19): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(161,19): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(170,29): warning C4244: '=': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(170,29): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(170,29): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(170,29): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(170,29): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(171,29): warning C4244: '=': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(171,29): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(171,29): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(171,29): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(171,29): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(172,33): warning C4244: '=': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(172,33): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(172,33): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(172,33): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(172,33): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(173,33): warning C4244: '=': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(173,33): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(173,33): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(173,33): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(173,33): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(182,31): warning C4244: '=': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(182,31): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(182,31): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(182,31): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(182,31): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(183,31): warning C4244: '=': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(183,31): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(183,31): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(183,31): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(183,31): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(184,31): warning C4244: '=': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(184,31): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(184,31): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(184,31): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(184,31): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(185,31): warning C4244: '=': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(185,31): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(185,31): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(185,31): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(185,31): warning C4244:         ]
+  Display.cpp
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,71): warning C4244: 'argument': conversion from 'const _Ty' to 'Uint8', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,71): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,71): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,71): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,71): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,62): warning C4244: 'argument': conversion from 'const _Ty' to 'Uint8', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,62): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,62): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,62): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,62): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,53): warning C4244: 'argument': conversion from 'const _Ty' to 'Uint8', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,53): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,53): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,53): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,53): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,44): warning C4244: 'argument': conversion from 'const _Ty' to 'Uint8', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,44): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,44): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,44): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Display.cpp(17,44): warning C4244:         ]
+  Image.cpp
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(23,20): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(24,20): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(40,28): warning C4244: '=': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(40,28): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(40,28): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(40,28): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(40,28): warning C4244:         ]
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(41,28): warning C4244: '=': conversion from 'const _Ty' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(41,28): warning C4244:         with
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(41,28): warning C4244:         [
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(41,28): warning C4244:             _Ty=float
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Image.cpp(41,28): warning C4244:         ]
+  Mask.cpp
+  Music.cpp
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Music.cpp(15,30): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+  Rect.cpp
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Rect.cpp(10,15): warning C4244: '+=': conversion from 'const float' to 'int', possible loss of data
+G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Rect.cpp(11,15): warning C4244: '+=': conversion from 'const float' to 'int', possible loss of data
+  Cppgame.vcxproj -> G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x64\Cppgame.lib

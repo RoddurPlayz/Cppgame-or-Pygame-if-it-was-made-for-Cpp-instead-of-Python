@@ -13,6 +13,8 @@
 #include "Math.h"
 #include "Clock.h"
 #include "Music.h"
+#include "Rect.h"
+#include "Mask.h"
 
 
 static SDL_Window* Display;
@@ -63,6 +65,13 @@ namespace cppgame
     RECT Rect(const std::array<float, 2>& left_top, const std::array<float, 2>& width_height);
     RECT Rect(const std::array<float, 4>& single_arg);
 
+
+    namespace mask
+    {
+        MASK from_surface(SDL_Texture* texture);
+    }
+
+
     namespace math
     {
         VECTOR2 Vector2(const float x, const float y);
@@ -89,6 +98,7 @@ namespace cppgame
         public:
             IMAGE image;
             RECT rect;
+            MASK mask;
 
             virtual void update();
         };

@@ -36,6 +36,12 @@
     <ClInclude Include="Cppgame\include\Cppgame-src\Math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Cppgame\include\Cppgame-src\Mask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cppgame\include\Cppgame-src\Mask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cppgame\include\Cppgame-src\Cppgame.cpp">
@@ -54,6 +60,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Cppgame\include\Cppgame-src\Rect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cppgame\include\Cppgame-src\Mask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cppgame\include\Cppgame-src\Mask.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

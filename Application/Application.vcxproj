@@ -71,26 +71,26 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Cppgame\Cppgame\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Cppgame\Cppgame\lib\x86;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)output\x86\$(Configuration)</OutDir>
     <IntDir>$(SolutionDir)intermediate\x86\$(Configuration)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Cppgame\Cppgame\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Cppgame\Cppgame\lib\x86;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)output\x86\$(Configuration)</OutDir>
     <IntDir>$(SolutionDir)intermediate\x86\$(Configuration)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Cppgame\Cppgame\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Cppgame\Cppgame\lib\x64;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)output\$(Platform)\$(Configuration)</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(Platform)\$(Configuration)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Cppgame\Cppgame\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Cppgame\Cppgame\lib\x64;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)output\$(Platform)\$(Configuration)</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(Platform)\$(Configuration)</IntDir>
   </PropertyGroup>

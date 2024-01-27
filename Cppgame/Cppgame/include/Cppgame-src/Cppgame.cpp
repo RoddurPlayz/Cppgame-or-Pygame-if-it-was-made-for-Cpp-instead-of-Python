@@ -14,6 +14,8 @@
 #include "Math.h"
 #include "Clock.h"
 #include "Music.h"
+#include "Rect.h"
+#include "Mask.h"
 
 
 int cppgame::init()
@@ -186,6 +188,38 @@ RECT cppgame::Rect(const std::array<float, 4>& single_arg)
 }
 
 
+MASK cppgame::mask::from_surface(SDL_Texture* texture)
+{
+    MASK mask;
+
+    Uint32 format;
+    int access;
+    SDL_QueryTexture(texture, &format, &access, &mask.width, &mask.height);
+
+    mask.data = new bool[mask.width * mask.height];
+
+    void* pixels;
+    int pitch;
+    SDL_LockTexture(texture, NULL, &pixels, &pitch);
+
+    for (int y = 0; y < mask.height; y++)
+    {
+        for (int x = 0; x < mask.width; x++)
+        {
+            Uint32 pixel = ((Uint32*)pixels)[y * (pitch / 4) + x];
+
+            Uint8 alpha = pixel >> 24;
+
+            mask.data[y * mask.width + x] = (alpha > 0);
+        }
+    }
+
+    SDL_UnlockTexture(texture);
+
+    return mask;
+}
+
+
 VECTOR2 cppgame::math::Vector2(const float x, const float y)
 {
     VECTOR2 vec2;
@@ -222,10 +256,7 @@ CLOCK cppgame::time::clock()
 }
 
 
-void cppgame::sprite::Sprite::update()
-{
-
-}
+void cppgame::sprite::Sprite::update() {}
 
 
 cppgame::sprite::Group::Group(std::vector<Sprite*> sprites)
@@ -267,10 +298,7 @@ cppgame::sprite::Group::~Group()
 }
 
 
-void cppgame::extra::Extras::on_quit()
-{
-
-}
+void cppgame::extra::Extras::on_quit() {}
 
 
 cppgame::extra::Extras::~Extras()
