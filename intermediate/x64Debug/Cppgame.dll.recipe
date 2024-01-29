@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\output\x86\Release\Application.exe</FullPath>
+      <FullPath>G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x64\Cppgame.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

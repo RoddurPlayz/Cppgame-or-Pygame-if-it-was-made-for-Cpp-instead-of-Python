@@ -1,9 +1,9 @@
-﻿E:\Visual-Studio-2022\Visual-Studio-2022\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(516,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
-E:\Visual-Studio-2022\Visual-Studio-2022\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  main.cpp
+﻿G:\Visual-Studio-2022\Visual-Studio-2022\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(516,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+G:\Visual-Studio-2022\Visual-Studio-2022\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   Generating code
-  21 of 22 functions (95.5%) were compiled, the rest were copied from previous compilation.
-    13 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  18 of 139 functions (12.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Application.vcxproj -> E:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\output\x86\Release\Application.exe
+LINK : warning LNK4020: a type record in 'g:\visual-studio-2022\visual-studio-2022-projects\cpp\projects\project-cppgame\solution\cppgame\cppgame\lib\x86\Cppgame.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+  Application.vcxproj -> G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\output\x86\Release\Application.exe

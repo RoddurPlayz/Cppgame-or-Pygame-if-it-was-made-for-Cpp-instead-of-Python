@@ -1,9 +1,9 @@
 ﻿G:\Visual-Studio-2022\Visual-Studio-2022\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(516,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 G:\Visual-Studio-2022\Visual-Studio-2022\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   Clock.cpp
+  Cppgame.cpp
 G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Clock.cpp(10,17): warning C4244: 'initializing': conversion from 'double' to 'long', possible loss of data
 G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Clock.cpp(15,30): warning C4244: 'argument': conversion from 'double' to 'Uint32', possible loss of data
-  Cppgame.cpp
 G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,112): warning C4244: 'argument': conversion from 'const _Ty' to 'int', possible loss of data
 G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,112): warning C4244:         with
 G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Cppgame.cpp(63,112): warning C4244:         [
@@ -99,4 +99,4 @@ G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\S
   Rect.cpp
 G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Rect.cpp(10,15): warning C4244: '+=': conversion from 'const float' to 'int', possible loss of data
 G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\include\Cppgame-src\Rect.cpp(11,15): warning C4244: '+=': conversion from 'const float' to 'int', possible loss of data
-  Cppgame.vcxproj -> G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x64\Cppgame.lib
+  Cppgame.vcxproj -> G:\Visual-Studio-2022\Visual-Studio-2022-Projects\Cpp\Projects\Project-Cppgame\Solution\Cppgame\Cppgame\lib\x86\Cppgame.lib
