@@ -1,0 +1,49 @@
+name: PR Notification on Open/Synchronize
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  notify-pr-discord:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Get PR Information
+        id: pr_info
+        run: |
+          PR_TITLE=$(echo "${{ github.event_name }}" | tr '[:lower:]' '[:upper:]')
+          PR_AUTHOR=$(jq -r .pull_request.user.login "${{ github.event_path }}")
+          PR_URL="${{ github.event.pull_request.html_url }}"
+
+          echo "::set-output name=title::${PR_TITLE}"
+          echo "::set-output name=author::${PR_AUTHOR}"
+          echo "::set-output name=pr_url::${PR_URL}"
+
+      - name: Send Discord Notification
+        run: |
+          WEBHOOK_URL=${{ secrets.DISCORD_PR_WEBHOOK }}
+
+          TITLE="${{ steps.pr_info.outputs.title }}"
+          AUTHOR="${{ steps.pr_info.outputs.author }}"
+          PR_URL="${{ steps.pr_info.outputs.pr_url }}"
+
+          MESSAGE="New PR ${TITLE} by ${AUTHOR}\n"
+          MESSAGE+="PR URL: ${PR_URL}"
+
+          curl -X POST -H "Content-Type: application/json" \
+            -d "{\"embeds\": [{\"title\": \"${MESSAGE}\", \"color\": 16711680}]}" \
+            "${WEBHOOK_URL}"

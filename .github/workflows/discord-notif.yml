@@ -1,0 +1,58 @@
+name: Discord Notification on Push
+
+on:
+  push:
+    branches:
+      - master
+      - main
+      - Linux
+      - Development
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Get Commit Information
+        id: commit_info
+        run: |
+          COMMIT_TITLE=$(git log -1 --pretty=format:"%s")
+          COMMIT_AUTHOR=$(git log -1 --pretty=format:"%an")
+          COMMIT_DESCRIPTION=$(git log -1 --pretty=format:"%b")
+
+          echo "::set-output name=title::${COMMIT_TITLE}"
+          echo "::set-output name=author::${COMMIT_AUTHOR}"
+          echo "::set-output name=description::${COMMIT_DESCRIPTION}"
+
+      - name: Send Discord Notification
+        run: |
+          WEBHOOK_URL=${{ secrets.DISCORD_WEBHOOK_URL }}
+          REPO_URL=https://github.com/${{ github.repository }}
+
+          TITLE="${{ steps.commit_info.outputs.title }}"
+          AUTHOR="${{ steps.commit_info.outputs.author }}"
+          DESCRIPTION="${{ steps.commit_info.outputs.description }}"
+
+          MESSAGE="New commit in [${{ github.repository }}](${REPO_URL})\n\n"
+          MESSAGE+="**Title:** ${TITLE}\n"
+          
+          if [ -n "$DESCRIPTION" ]; then
+            MESSAGE+="**Description:** ${DESCRIPTION}\n"
+          fi
+          
+          MESSAGE+="Committed By: ${AUTHOR}"
+
+          curl -X POST -H "Content-Type: application/json" \
+            -d "{\"embeds\": [{\"title\": \"${MESSAGE}\", \"color\": 16711680}]}" \
+            "${WEBHOOK_URL}"
