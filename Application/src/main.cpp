@@ -1,8 +1,7 @@
 #include <iostream>
 
 
-#include <Cppgame-src/Cppgame.h>
-
+#include "../../Cppgame/src/Cppgame.h"
 
 class Super_Extras : public cppgame::extra::Extras
 {
